@@ -27,3 +27,9 @@ One common way is to implement the function to split the longest edge of the inp
 ```matlab
 Unsound_Method_Random_Split(maxValue) % where maxValue refers to the number of random samples we take from our calculated interval range
 ```
+The final branch strategy is to split the input domain according to the computed value of the gradient interval. For this particular strategy, the Jacobian matrix of the output z with respect to each element of the input is computed. In theory, gradient interval can be calculated by differentiating z with respect to each interval.  The problem however rises with the presence of the RELU activation function and thus the number of layers and layer size has to be taken into account.
+
+### Details of the Bounding Strategy
+Unsound_Method_Random_Split(maxValue) % where maxValue refers to the number of random samples we take from our calculated interval range
+```
+The final branch strategy is to split the input domain according to the computed value of the gradient interval. For this particular strategy, the Jacobian matrix of the output z with respect to each element of the input is computed. In theory, gradient interval can be calculated by differentiating z with respect to each interval.  The problem however rises with the presence of the RELU activation function and thus the number of layers and layer size has to be taken into account.
