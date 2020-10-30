@@ -1,7 +1,7 @@
 # Formal Verification of Neural Networks
 
 ### Overview
-Supervisor : Pawan Kumar
+Supervisor : Pawan Kumar   
 Student : Jin Yeob Chung @jinyup100
 
 ### Introduction
