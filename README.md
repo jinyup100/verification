@@ -13,7 +13,17 @@ In the wake of such dangers, a greater emphasis has been placed on developing me
 2) Analysis of the Branching Methods including Random Splitting, Gradient Interval Splitting, and Splitting along Long Edge
 2) Analysis of the Bounding Methods including Unsound Method, Interval Bound Propagation Method, Linear Programming Method and Mixed Integer Programming Methods
 
-### Details of the Splitting Methods
+### Details of the Subdomain Partitioning Branch Methods
 ```matlab
-Unsound_Method_Random_Split(
+Unsound_Method_Random_Split(maxValue) % where maxValue refers to the number of random samples we take from our calculated interval range
+```
+The Branch Strategy exploits the piecewise lienar property and bisections the input sub-domain that generates the greatest upper bound into subdomains X1 and X2. The bisection of the input sub-domain with the greatest upper bound is iterated continually to create tighter bounds of the output z. In Unsound_Method_Random_Split, "maxValue" number of random samples are taken from each sub-domain to find the upper bound.
+
+```matlab
+Unsound_Method_Random_Split(maxValue) % where maxValue refers to the number of random samples we take from our calculated interval range
+```
+One common way is to implement the function to split the longest edge of the input domain. Assuming the piecewise linear property, the function partitions the input domain into subdomain by computing s(i) and j and effectively look for the element with the longest relative length. 
+
+```matlab
+Unsound_Method_Random_Split(maxValue) % where maxValue refers to the number of random samples we take from our calculated interval range
 ```
